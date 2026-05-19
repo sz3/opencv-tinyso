@@ -49,6 +49,7 @@ cmake_flags=(
     -DANDROID_STL=c++_shared
     -DANDROID_SDK_ROOT="$ANDROID_SDK_ROOT"
     -DCMAKE_BUILD_TYPE=Release
+    -DCMAKE_SHARED_LINKER_FLAGS="-Wl,-z,max-page-size=16384"  #16kb alignment for play store
     -DBUILD_LIST=calib3d,imgcodecs,imgproc,photo,core,java
     -DBUILD_SHARED_LIBS=OFF
     -DBUILD_ANDROID_PROJECTS=ON
